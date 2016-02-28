@@ -7,9 +7,8 @@ const html = require('html-webpack-plugin');
 
 const config = {
   devtool: debug ? "inline-sourcemap" : null,
-  entry: {
-    app: ['./src/index.js']
-  },
+  entry: path.join(__dirname, "src", "js", "index.js"),
+  context: path.join(__dirname, "src"),
   module: {
     loaders: [
       // JAVASCRIPT / BABEL
@@ -36,9 +35,12 @@ const config = {
     ]
   },
   output: {
-    path: path.join(__dirname, './build'),
+    path: path.join(__dirname, 'build'),
     filename: '[name].js',
     publicPath: '/build/'
+  },
+  resolve: {
+      modulesDirectories: ["node_modules", "bower_components"],
   },
   plugins: debug ? [
     new html({
