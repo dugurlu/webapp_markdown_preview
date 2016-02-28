@@ -11,6 +11,11 @@ Scaffolding that can be used to as entry point for new Node, Webpack, React, Sas
 - [webpack-dev-server](https://github.com/webpack/webpack-dev-server)
 
 ## Usage
+### Install
+To use webpack, react and all the other good stuff, first install the node dependencies:
+
+`npm install`
+
 ### webpack-dev-server
 Start the server with `npm run dev`.
 
@@ -18,7 +23,7 @@ Server uses `--inline` and `--hot` to refresh on changes.
 
 The server can be accesses at [http://localhost:8081](http://localhost:8081)
 
-### production flag
+### Switch between debug/production mode
 To switch between debug and production, `NODE_ENV` can be used like this:
 ```
 NODE_ENV=production webpack
