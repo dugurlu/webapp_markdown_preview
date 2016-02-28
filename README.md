@@ -25,13 +25,18 @@ The server can be accesses at [http://localhost:8081](http://localhost:8081)
 
 ### Switch between debug/production mode
 To switch between debug and production, `NODE_ENV` can be used like this:
+`NODE_ENV=production webpack` or `NODE_ENV=production npm run <script>`
+
+
+###  Import React or CSS
+To use react, simply import it: 
 ```
-NODE_ENV=production webpack
+import React  from 'react'
+import ReactDOM from 'react-dom'
 ```
 
-or
+To import CSS via javascript (supports .css as well as .scss file extensions):
+`import CSS from './css/<filename>.css'`
 
-```
-NODE_ENV=production npm run <script>
-```
+
 
