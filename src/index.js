@@ -1,12 +1,7 @@
-/*
-Example usage:
-### React ###
+'use strict';
 import React from 'react'
 import ReactDOM from 'react-dom'
 
-### CSS ###
-import CSS from './css/style.scss'
+import Layout from './js/Layout'
 
-### Bootstrap ###
-import Bootstrap from './css/bootstrap.css'
-*/
+ReactDOM.render(<Layout />, document.getElementById('app'));

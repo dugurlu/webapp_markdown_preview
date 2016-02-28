@@ -2,6 +2,7 @@ const debug = process.env.NODE_ENV !== "production";
 const webpack = require('webpack');
 const path = require('path');
 const autoprefixer = require('autoprefixer');
+const html = require('html-webpack-plugin');
 
 
 const config = {
@@ -39,7 +40,18 @@ const config = {
     filename: '[name].js',
     publicPath: '/build/'
   },
-  plugins: debug ? [] : [
+  plugins: debug ? [
+    new html({
+      title: 'Github-Flavored Markdown Previewer',
+      filename: 'index.html',
+      template: 'index.ejs'
+    }),
+  ] : [
+    new html({
+      title: 'Github-Flavored Markdown Previewer',
+      filename: 'index.html',
+      template: 'index.ejs'
+    }),
     new webpack.optimize.DedupePlugin(),
     new webpack.optimize.OccurenceOrderPlugin(),
     new webpack.optimize.UglifyJsPlugin({ mangle: false, sourcemap: false }),
