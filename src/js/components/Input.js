@@ -2,7 +2,6 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import Marked from 'marked'
 
-import Bootstrap from '../../css/bootstrap.css'
 import CSS from '../../css/style.scss'
 
 import Preview from './Preview'
