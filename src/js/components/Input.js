@@ -163,19 +163,19 @@ Underscores
   }
   render() {
     return (
-      <div class="container">
-        <div class="jumbotron text-center">
+      <div className="container">
+        <div className="jumbotron text-center">
           <h1>Markdown Preview</h1>
         </div>
-        <div class="row">
-          <div class="col-md-6">
+        <div className="row">
+          <div className="col-md-6">
             <textarea
               rows="50"
               ref="markdownInput"
               autofocus value={this.state.markdown}
               onChange={this.handleChange.bind(this)} />
           </div>
-          <div class="col-md-6"><Preview markdown={this.createMarkdown()} /></div>
+          <div className="col-md-6"><Preview markdown={this.createMarkdown()} /></div>
         </div>
       </div>
     );
